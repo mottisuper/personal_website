@@ -2,7 +2,119 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "'Inter', sans-serif",
+        background: "radial-gradient(circle at top, #1e293b, #0f172a)",
+        color: "#e5e7eb",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        className="card"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "20px",
+          padding: "40px 50px",
+          textAlign: "center",
+          backdropFilter: "blur(12px)",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
+          maxWidth: "420px",
+          width: "90%",
+          animation: "fadeUp 1s ease-out forwards",
+        }}
+      >
+        <div
+          className="avatar"
+          style={{
+            width: "120px",
+            height: "120px",
+            margin: "0 auto 25px",
+            borderRadius: "50%",
+            overflow: "hidden",
+            border: "2px solid #38bdf8",
+            animation: "pulseGlow 5s ease-in-out infinite",
+          }}
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+            alt="Robot avatar"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </div>
+
+        <h1
+          style={{
+            fontSize: "2rem",
+            fontWeight: 600,
+            marginBottom: "10px",
+            letterSpacing: "0.5px",
+          }}
+        >
+          Motti Aronsohn
+        </h1>
+        <div
+          className="glow-line"
+          style={{
+            width: "60px",
+            height: "3px",
+            background:
+              "linear-gradient(90deg, transparent, #38bdf8, transparent)",
+            margin: "22px auto",
+            borderRadius: "10px",
+          }}
+        ></div>
+        <h2 style={{ fontSize: "1.1rem", fontWeight: 400, color: "#9ca3af" }}>
+          Data Science & Fullstack Engineer
+        </h2>
+      </div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes pulseGlow {
+          0%,
+          100% {
+            transform: scale(1);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+          }
+          50% {
+            transform: scale(1.04);
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.65);
+          }
+        }
+
+        .card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75);
+          transition: all 0.4s ease;
+        }
+      `}</style>
+
+      {/* Google Font */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet"
+      />
+    </div>
+
+    /*<div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"
@@ -61,5 +173,6 @@ export default function Home() {
         </div>
       </main>
     </div>
+*/
   );
 }
