@@ -45,9 +45,16 @@ export default function Home() {
             animation: "pulseGlow 5s ease-in-out infinite",
           }}
         >
+          {/*
           <img
             src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
             alt="Robot avatar"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+          */}
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/8193/8193649.png"
+            alt="British Shorthair Cat icon"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
