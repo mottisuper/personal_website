@@ -45,7 +45,7 @@ const skills = [
 
 export default function Home() {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set(["hero"]));
-  const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+  const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   useEffect(() => {
     const observerOptions = {
@@ -92,9 +92,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        ref={(el) => {
-          sectionRefs.current["hero"] = el;
-        }}
+        ref={(el) => (sectionRefs.current["hero"] = el)}
         style={{
           minHeight: "100vh",
           display: "flex",
@@ -126,8 +124,8 @@ export default function Home() {
             }}
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/8193/8193649.png"
-              alt="British Shorthair Cat icon"
+              src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+              alt="User profile icon"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
@@ -271,9 +269,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        ref={(el) => {
-          sectionRefs.current["about"] = el;
-        }}
+        ref={(el) => (sectionRefs.current["about"] = el)}
         style={{
           padding: "80px 20px",
           maxWidth: "900px",
@@ -318,9 +314,7 @@ export default function Home() {
       {/* Skills Section */}
       <section
         id="skills"
-        ref={(el) => {
-          sectionRefs.current["skills"] = el;
-        }}
+        ref={(el) => (sectionRefs.current["skills"] = el)}
         style={{
           padding: "80px 20px",
           maxWidth: "1000px",
@@ -392,9 +386,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        ref={(el) => {
-          sectionRefs.current["projects"] = el;
-        }}
+        ref={(el) => (sectionRefs.current["projects"] = el)}
         style={{
           padding: "80px 20px",
           maxWidth: "1200px",
@@ -505,9 +497,7 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        ref={(el) => {
-          sectionRefs.current["contact"] = el;
-        }}
+        ref={(el) => (sectionRefs.current["contact"] = el)}
         style={{
           padding: "80px 20px",
           maxWidth: "800px",
